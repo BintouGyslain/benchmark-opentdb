@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: stg_questions
+    description: "Questions OpenTDB nettoyées (silver)."
+    columns:
+      - name: question_id
+        tests: [unique, not_null]
+      - name: difficulty
+        tests:
+          - accepted_values: {values: [easy, medium, hard]}
+  - name: stg_ai_runs
+    description: "Réponses des modèles avec statut d'appel et d'évaluation."
+  - name: mart_benchmark
+    description: "Agrégats par modèle, prompt, catégorie et difficulté. Précision = n_correct / n_evaluated."

@@ -1,0 +1,13 @@
+requests
+pandas
+pyarrow
+duckdb
+streamlit
+rcat > requirements.txt << 'EOF'
+requests
+pandas
+pyarrow
+duckdb
+streamlit
+dbt-duckdb
+EOF

@@ -1,0 +1,9 @@
+name: benchmark
+version: "1.0"
+profile: benchmark
+model-paths: ["models"]
+models:
+  benchmark:
+    staging: {+materialized: view}
+    intermediate: {+materialized: view}
+    marts: {+materialized: table}
